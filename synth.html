@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Jelly Demo</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		table, th, td {
+    		border: 1px solid black;
+		}
+		th,td {
+		    padding: 15px;
+		    align: center;
+		}
+	</style>
+	<script src="src/BufferLoader.js"></script>
+	<script src="src/synth.js"></script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="5">
+				<button id="buttonPower">Power</button>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<canvas id="oscillator" width="500" height="300"></canvas>
+				<br />^ Can add visual here
+			</td>
+			<td><input type="range" id="volume" max="100" min="1" value="10">Volume</input></td>
+		</tr>
+		<tr>
+			<td><button id="buttonSineWave">Sine wave</button></td>
+			<td><button id="buttonSquareWave">Square wave</button></td>
+			<td><button id="buttonSawtoothWave">Sawtooth wave</button></td>
+			<td><button id="buttonTriangleWave">Triangle wave</button></td>
+			<td><input type="range" id="freqRange" max="100" min="1">(Hz)</input></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="lpf">Low Pass filter</td>
+			<td colspan="2"><input type="range" id="lpfCutoffFreq" max="100" min="1">Cut off Freq</input></td>
+			<td colspan="2"><input type="range" id="lpfQuality" max="100" min="1">Quality</input></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="hpf">High Pass filter</td>
+			<td colspan="2"><input type="range" id="hpfCutoffFreq" max="100" min="1">Cut off Freq</input></td>
+			<td colspan="2"><input type="range" id="hpfQuality" max="100" min="1">Quality</input></td>
+		</tr>
+		<tr>
+			<td><button id="testSound1">Play Sound 1</button></td>
+			<td><button id="testSound2">Play Sound 2</button></td>
+		</tr>		
+	</table>
+
+</body>
+</html>
